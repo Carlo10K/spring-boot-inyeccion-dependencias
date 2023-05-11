@@ -1,5 +1,6 @@
 package com.example.springboot.di.app.controllers;
 
+import com.example.springboot.di.app.models.service.IService;
 import com.example.springboot.di.app.models.service.MyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,9 +13,14 @@ public class IndexController {
     //inyeccion por inicializacion
     //private MyService service = new MyService();
 
-    //inyeccion con autowired
+    //inyeccion con autowired con clase concreta
+    //@Autowired
+    //private MyService service;
+
+    //inyeccion con autowired con interfaz
     @Autowired
-    private MyService service;
+    private IService service;
+
 
     @GetMapping({"/", "", "/index"})
     public String index(Model model){
