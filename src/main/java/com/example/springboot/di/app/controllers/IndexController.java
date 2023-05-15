@@ -22,6 +22,9 @@ public class IndexController {
     //@Autowired
     private IService service;
 
+    public IndexController(IService service) {
+        this.service = service;
+    }
 
     @GetMapping({"/", "", "/index"})
     public String index(Model model){
@@ -29,8 +32,8 @@ public class IndexController {
         return "index";
     }
 
-    @Autowired
-    public void setService(IService service) {
-        this.service = service;
-    }
+    //@Autowired
+    //public void setService(IService service) {
+        //this.service = service;
+    //}
 }
