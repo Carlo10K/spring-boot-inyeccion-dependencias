@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 @Primary
 public class MyServiceComplex implements IService{
 
-
     @Override
     public String operation() {
         return "ejecucion de un proceso complicado";

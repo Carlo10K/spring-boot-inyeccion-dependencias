@@ -3,6 +3,7 @@ package com.example.springboot.di.app.controllers;
 import com.example.springboot.di.app.models.service.IService;
 import com.example.springboot.di.app.models.service.MyService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,12 +20,15 @@ public class IndexController {
 
     //inyeccion con autowired con interfaz
 
-    //@Autowired
+    @Autowired
+    @Qualifier("miServicioSimple")
     private IService service;
 
+    /*
     public IndexController(IService service) {
         this.service = service;
     }
+    */
 
     @GetMapping({"/", "", "/index"})
     public String index(Model model){
