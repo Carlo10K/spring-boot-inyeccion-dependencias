@@ -8,7 +8,7 @@ public class MyService implements IService{
 
     @Override
     public String operation() {
-        return "ejecucion de un proceso";
+        return "ejecucion de un proceso simple";
     }
 
 }
