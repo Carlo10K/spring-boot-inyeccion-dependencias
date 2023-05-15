@@ -18,7 +18,8 @@ public class IndexController {
     //private MyService service;
 
     //inyeccion con autowired con interfaz
-    @Autowired
+
+    //@Autowired
     private IService service;
 
 
@@ -28,5 +29,8 @@ public class IndexController {
         return "index";
     }
 
-
+    @Autowired
+    public void setService(IService service) {
+        this.service = service;
+    }
 }
