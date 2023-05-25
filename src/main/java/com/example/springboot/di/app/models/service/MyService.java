@@ -2,7 +2,7 @@ package com.example.springboot.di.app.models.service;
 
 import org.springframework.stereotype.Service;
 
-@Service("miServicioSimple")
+//@Service("miServicioSimple")
 public class MyService implements IService{
 
 

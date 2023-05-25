@@ -21,7 +21,7 @@ public class IndexController {
     //inyeccion con autowired con interfaz
 
     @Autowired
-    @Qualifier("miServicioSimple")
+    //@Qualifier("miServicioSimple")
     private IService service;
 
     /*
