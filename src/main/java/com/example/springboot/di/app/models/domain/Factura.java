@@ -15,9 +15,11 @@ import java.util.List;
 
 //@RequestScope           crea y destruye el componente al hacer un request  @SessionScope para acceder a scope de sesion
 //@SessionScope  acceder al contexto de sesion y nos crea una sesion http donde podemos almacenar informacion *investigar mas*
+//https://www.arquitecturajava.com/jsp-scopes-y-pagecontext/
+//@ApplicationScope      similar al singletonn o como no poner nada
 
 @Component
-@ApplicationScope           //similar al singletonn o como no poner nada
+@RequestScope
 public class Factura {
 
     @Value("${factura.descripcion}")
