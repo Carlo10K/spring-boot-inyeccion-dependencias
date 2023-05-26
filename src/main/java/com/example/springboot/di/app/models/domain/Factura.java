@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.ApplicationScope;
 import org.springframework.web.context.annotation.RequestScope;
 import org.springframework.web.context.annotation.SessionScope;
 
@@ -13,12 +14,11 @@ import java.io.Serializable;
 import java.util.List;
 
 //@RequestScope           crea y destruye el componente al hacer un request  @SessionScope para acceder a scope de sesion
+//@SessionScope  acceder al contexto de sesion y nos crea una sesion http donde podemos almacenar informacion *investigar mas*
 
 @Component
-@SessionScope  //acceder al contexto de sesion y nos crea una sesion http donde podemos almacenar informacion *investigar mas*
-public class Factura implements Serializable {
-
-    private static final long serialVersionUID = 946004357128146951L;
+@ApplicationScope           //similar al singletonn o como no poner nada
+public class Factura {
 
     @Value("${factura.descripcion}")
     private String descripcion;
